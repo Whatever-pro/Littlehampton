@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+   <style type="text/css" data-href="setting.css">*{box-sizing:border-box}.visually-hidden:not(:focus):not(:active),input[type=checkbox].visually-hidden,input[type=radio].visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;border:0;padding:0;white-space:nowrap;clip-path:inset(100%);clip:rect(0 0 0 0);overflow:hidden}body{font-family:"Verdana","Tahoma",sans-serif;font-size:12px;line-height:16px}a{font:inherit;color:inherit;text-decoration:none}.container{display:flex;position:relative;max-width:600px;margin:0 auto;padding:0 10px}.page-header .container{min-height:42px}.inner-heading{margin:20px 0 4px;line-height:32px}.header-link,.header-logo{display:flex;margin-right:auto;align-items:center}.header-link,.new-block h3{font-size:14px;line-height:20px}.header-link::before{content:"";width:10px;height:18px;padding-right:8px;display:inline-block;vertical-align:text-bottom}.theme-button{position:relative;margin:auto 0;padding:7px 16px 7px 36px;font-size:12px;border-radius:2px;background-color:transparent}.theme-button::before{position:absolute;content:"";width:15px;height:15px;top:7px;left:12px}.main-menu a:active,.menu-close:active,.menu-open:active,.theme-button:active{opacity:.8}.menu{position:relative;margin-right:-10px;margin-left:24px;width:42px;height:42px;font-size:0;border:0;cursor:pointer;background-repeat:no-repeat;background-position:center}.menu-close{background-image:url(img/menu-close.svg)}.main-menu{position:absolute;z-index:1;padding:0;top:42px;right:0}.menu-open+.main-menu{display:none}.main-menu ul{list-style:none;margin:0;padding:10px 0}.main-menu a{display:block;padding:10px 56px 10px 20px}.index-main,.inner-main{padding:0;min-height:calc(100vh - 84px)}.index-main .container,.inner-main .container{flex-direction:column}.news-view{display:flex;margin:20px 0}.news-view button{position:relative;display:block;margin-right:10px;padding:7px 16px 7px 34px;border-radius:16px;background-color:transparent}.row-view::before,.tile-view::before{position:absolute;content:"";top:9px;left:16px;width:12px;height:10px}.tile-view::before{width:10px}.news-list{margin-bottom:20px}.news-list-heading{flex-basis:100%}.new-block{display:flex;margin-bottom:10px;padding:12px 12px 16px}.new-block img{flex-shrink:0;margin-right:12px;width:56px;height:56px;object-fit:cover}.new-block h3{margin:0 0 4px}.new-block p{margin:0 0 8px}.new-block time,body{margin:0}.list-tiles-view.news-list{display:flex;flex-wrap:wrap;margin-bottom:20px;margin-right:-10px}.list-tiles-view .new-block{flex-basis:calc(50% - 10px);margin-right:10px;margin-bottom:15px;flex-direction:column}.list-tiles-view .new-block img{position:relative;width:calc(100% + 24px);top:-12px;left:-12px;height:146px;margin-right:0}.list-tiles-view .new-block .new-block-text{display:flex;flex-direction:column;flex-grow:1}.list-tiles-view .new-block time{margin-top:auto}.cookies-agreement{z-index:1;display:flex;flex-direction:column;position:fixed;bottom:0;width:100%;padding:10px 20px 20px}.cookies-agreement .button{margin-left:auto}.cookies-agreement-closed{display:none}.button{font-size:12px;border:0;padding:7px 16px;border-radius:2px}.button:active{opacity:.8}.page-footer{margin-top:auto;min-height:42px}.footer-logo{margin-left:auto;display:block;padding:6px 0 3px}.page-footer p{margin:auto 0}.subscription{display:flex;margin-bottom:12px;padding:20px 12px}.subscription-message{position:relative;margin-left:24px;padding:12px 32px 16px 40px;border-radius:0 32px;font-size:18px;line-height:24px}.subscription-message::before{position:absolute;content:"";width:48px;height:48px;top:0;left:-24px}.subscription-inner{position:relative;flex-grow:1;margin-right:10px}.subscription-label{position:absolute;top:-12px;font-size:10px;line-height:14px}.subscription-email{width:100%;height:30px;border:0;background-color:transparent;font:inherit;font-size:14px;line-height:30px}.subscription-email::placeholder{color:#aaa;font:inherit;font-size:14px;font-style:italic}.subscription-button{flex-shrink:0}.dark-theme .header-logo{filter:invert(1) hue-rotate(180deg) brightness(2)}</style>
+   <style type="text/css" data-href="style.css">.light-theme {
+    color: #333333;
+    background-color: #eae9f2;
+  }
+  
+  .light-theme .page-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .light-theme .header-link {
+    color: #6653d9;
+  }
+  
+  .light-theme .header-link::before {
+    background: url("img/arrow-back-light.svg") no-repeat 0 0;
+  }
+  
+  .light-theme .theme-button {
+    color: #6653d9;
+    border: 1px solid #6653d9;
+  }
+  
+  .light-theme .theme-button::before {
+    background-image: url("img/moon-normal.svg");
+  }
+  
+  .light-theme .theme-button:focus,
+  .light-theme .theme-button:hover {
+    color: #ffffff;
+    background-color: #6653d9;
+  }
+  
+  .light-theme .theme-button:focus::before,
+  .light-theme .theme-button:hover::before {
+    background-image: url("img/moon-hover.svg");
+  }
+  
+  .light-theme .menu-open {
+    background-color: #ffffff;
+    background-image: url("img/menu-open-light.svg");
+  }
+  
+  .light-theme .menu-open:focus,
+  .light-theme .menu-open:hover {
+    background-color: #6653d9;
+    background-image: url("img/menu-open-dark.svg");
+  }
+  
+  .light-theme .menu-close {
+    background-color: #6653d9;
+  }
+  
+  .light-theme .menu-close:focus,
+  .light-theme .menu-close:hover {
+    background-color: #473c8d;
+  }
+  
+  .light-theme .main-menu {
+    background-color: #6653d9;
+    color: #ffffff;
+  }
+  
+  .light-theme .main-menu a:focus,
+  .light-theme .main-menu a:hover {
+    background-color: #473c8d;
+  }
+  
+  .light-theme .news-view button {
+    border: 1px solid #6653d9;
+    color: #6653d9;
+  }
+  
+  .light-theme .news-view button:focus,
+  .light-theme .news-view button:hover,
+  .light-theme .news-view button:active,
+  .light-theme .news-view .view-checked {
+    background-color: #6653d9;
+    color: #ffffff;
+  }
+  
+  .light-theme .news-view .row-view:focus::before,
+  .light-theme .news-view .row-view:hover::before,
+  .light-theme .news-view .row-view:active::before {
+    background-image: url("img/rows-light-checked.svg");
+  }
+  
+  .light-theme .news-view .tile-view:focus::before,
+  .light-theme .news-view .tile-view:hover::before,
+  .light-theme .news-view .tile-view:active::before {
+    background-image: url("img/tiles-light-checked.svg");
+  }
+  
+  .light-theme .row-view::before {
+    background-image: url("img/rows-light.svg");
+  }
+  
+  .light-theme .tile-view::before {
+    background-image: url("img/tiles-light.svg");
+  }
+  
+  .light-theme .row-view::before {
+    background-image: url("img/rows-light.svg");
+  }
+  
+  .light-theme .row-view.view-checked::before {
+    background-image: url("img/rows-light-checked.svg");
+  }
+  
+  .light-theme .tile-view.view-checked::before {
+    background-image: url("img/tiles-light-checked.svg");
+  }
+  
+  .light-theme .new-block {
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .light-theme .new-block time {
+    color: #aaaaaa;
+  }
+  
+  .light-theme .cookies-agreement {
+    background-color: #fdeacd;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .light-theme .button {
+    background-color: #6653d9;
+    color: #ffffff;
+  }
+  
+  .light-theme .button:focus,
+  .light-theme .button:hover {
+    background-color: #473c8d;
+  }
+  
+  .light-theme .page-footer {
+    background-color: #6653d9;
+    color: #ffffff;
+  }
+  
+  .light-theme .subscription {
+    background-color: #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .light-theme .subscription-message {
+    background-color: #6653d9;
+    color: #eae9f2;
+  }
+  
+  .light-theme .subscription-message::before {
+    background-image: url("img/icon-ok-light.svg");
+  }
+  
+  .light-theme .subscription-label {
+    color: #6653d9;
+  }
+  
+  .light-theme .subscription-email {
+    border-bottom: 1px solid #6653d9;
+    color: #333333;
+  }
+  
+  .dark-theme {
+    color: #f2f2f2;
+    background-color: #17161a;
+  }
+  
+  .dark-theme .page-header {
+    background-color: #373540;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+  }
+  
+  .dark-theme .header-link {
+    color: #9484f2;
+  }
+  
+  .dark-theme .header-link::before {
+    background: url("img/arrow-back-dark.svg") no-repeat 0 0;
+  }
+  
+  .dark-theme .theme-button {
+    color: #9484f2;
+    border: 1px solid #9484f2;
+  }
+  
+  .dark-theme .theme-button::before {
+    background-image: url("img/sun-normal.svg");
+  }
+  
+  .dark-theme .theme-button:focus,
+  .dark-theme .theme-button:hover {
+    color: #17161a;
+    background-color: #9484f2;
+  }
+  
+  .dark-theme .theme-button:focus::before,
+  .dark-theme .theme-button:hover::before {
+    background-image: url("img/sun-hover.svg");
+  }
+  
+  .dark-theme .menu-open {
+    background-color: #373540;
+    background-image: url("img/menu-open-dark.svg");
+  }
+  
+  .dark-theme .menu-open:focus,
+  .dark-theme .menu-open:hover {
+    background-color: #473c8d;
+    background-image: url("img/menu-open-dark.svg");
+  }
+  
+  .dark-theme .menu-close {
+    background-color: #473c8d;
+  }
+  
+  .dark-theme .menu-close:focus,
+  .dark-theme .menu-close:hover {
+    background-color: #6653d9;
+  }
+  
+  .dark-theme .main-menu {
+    background-color: #473c8d;
+    color: #f2f2f2;
+  }
+  
+  .dark-theme .main-menu a:focus,
+  .dark-theme .main-menu a:hover {
+    background-color: #6653d9;
+  }
+  
+  .dark-theme .news-view button {
+    border: 1px solid #9484f2;
+    color: #9484f2;
+  }
+  
+  .dark-theme .news-view button:focus,
+  .dark-theme .news-view button:hover,
+  .dark-theme .news-view button:active,
+  .dark-theme .news-view .view-checked {
+    background-color: #9484f2;
+    color: #17161a;
+  }
+  
+  .dark-theme .news-view .row-view:focus::before,
+  .dark-theme .news-view .row-view:hover::before,
+  .dark-theme .news-view .row-view:active::before {
+    background-image: url("img/rows-dark-checked.svg");
+  }
+  
+  .dark-theme .news-view .tile-view:focus::before,
+  .dark-theme .news-view .tile-view:hover::before,
+  .dark-theme .news-view .tile-view:active::before {
+    background-image: url("img/tiles-dark-checked.svg");
+  }
+  
+  .dark-theme .row-view::before {
+    background-image: url("img/rows-dark.svg");
+  }
+  
+  .dark-theme .tile-view::before {
+    background-image: url("img/tiles-dark.svg");
+  }
+  
+  .dark-theme .row-view.view-checked::before {
+    background-image: url("img/rows-dark-checked.svg");
+  }
+  
+  .dark-theme .tile-view.view-checked::before {
+    background-image: url("img/tiles-dark-checked.svg");
+  }
+  
+  .dark-theme .new-block {
+    background-color: #2a2930;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .dark-theme .new-block time {
+    color: #888888;
+  }
+  
+  .dark-theme .cookies-agreement {
+    background-color: #473c8d;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .dark-theme .button {
+    background-color: #9484f2;
+    color: #17161a;
+  }
+  
+  .dark-theme .button:focus,
+  .dark-theme .button:hover {
+    background-color: #b6aaff;
+  }
+  
+  .dark-theme .page-footer {
+    background-color: #0a0910;
+    color: #f2f2f2;
+  }
+  
+  .dark-theme .subscription {
+    background-color: #2a2930;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .dark-theme .subscription-message {
+    background-color: #9484f2;
+    color: #17161a;
+  }
+  
+  .dark-theme .subscription-message::before {
+    background-image: url("img/icon-ok-dark.svg");
+  }
+  
+  .dark-theme .subscription-label {
+    color: #9484f2;
+  }
+  
+  .dark-theme .subscription-email {
+    border-bottom: 1px solid #9484f2;
+    color: #f2f2f2;
+  }</style>
+    <title>FlashNews!</title>
+  </head>
+
+  <body class="page light-theme">
+    <header class="page-header">
+      <div class="container">
+        <a class="header-logo">
+          <img src="img/main-logo.svg" width="67" height="29" alt="Логотип портала FlashNews!">
+        </a>
+        <button class="menu menu-open" type="button">Меню</button>
+        <nav class="main-menu">
+          <ul>
+            <li>
+              <a href="#">Колонка редактора</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+            <li>
+              <a href="#">Подписка</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="index-main">
+      <div class="container">
+        <h1 class="visually-hidden">Новостной портал FlashNews!</h1>
+        <div class="news-view">
+          <button class="row-view view-checked" type="button">Список</button>
+          <button class="tile-view" type="button">Плитка</button>
+        </div>
+        <section class="news-list">
+          <h2 class="visually-hidden">Все новости</h2>
+          <article class="new-block">
+            <img src="img/new-graph.jpg" alt="Новая библиотека">
+            <div class="new-block-text">
+              <h3>Новая библиотека для создания графиков</h3>
+              <p>Теперь вы можете создать дашборд за считанные секунды.</p>
+              <time datetime="2019-10-16">16 октября 2019</time>
+            </div>
+          </article>
+          <article class="new-block">
+            <img src="img/new-robot.jpg" alt="Что там у роботов?">
+            <div class="new-block-text">
+              <h3>Что там у роботов?</h3>
+              <p>В робототехнике происходит много интересного, эта новость могла бы быть об этом, но нет.</p>
+              <time datetime="2019-10-15">15 октября 2019</time>
+            </div>
+          </article>
+          <article class="new-block">
+            <img src="img/new-loop.jpg" alt="Бесконечные циклы">
+            <div class="new-block-text">
+              <h3>Бесконечные циклы: пора завязывать с этим</h3>
+              <p>Британские учёные выяснили, что работа ПО напрямую зависит от наличия в нём бесконечных циклов.</p>
+              <time datetime="2019-10-14">14 октября 2019</time>
+            </div>
+          </article>
+          <article class="new-block">
+            <img src="img/new-drone.jpg" alt="Кадры с дрона">
+            <div class="new-block-text">
+              <h3>ШОК! Секретные кадры с дрона-разведчика</h3>
+              <p>Никто не ожидал, что за стенами происходит ТАКОЕ…</p>
+              <time datetime="2019-10-13">13 октября 2019</time>
+            </div>
+          </article>
+          <article class="new-block">
+            <img src="img/new-research.jpg" alt="Новость 5">
+            <div class="new-block-text">
+              <h3>Из мира психологии</h3>
+              <p>Исследования показывают, что если делать больше, то можно сделать больше.</p>
+              <time datetime="2019-10-12">12 октября 2019</time>
+            </div>
+          </article>
+          <article class="new-block">
+            <img src="img/new-cat.jpg" alt="Новость 6">
+            <div class="new-block-text">
+              <h3>Внезапно</h3>
+              <p>Оказывается, чтобы начать учить JavaScript, необязательно быть котом.</p>
+              <time datetime="2019-10-11">11 октября 2019</time>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <aside class="cookies-agreement">
+      <p>Пока вы находитесь на нашем сайте и читаете новости, мы используем ваши кукис. Очень надеемся, что вы не против.</p>
+      <button class="button" type="button">Окей, продолжайте</button>
+    </aside>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p>© FlashNews!</p>
+        <a class="footer-logo">
+          <img src="img/white-logo.svg" alt="Логотип портала FlashNews!">
+        </a>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
